@@ -17,21 +17,9 @@
             background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             color: #333;
         }
-        .dark-mode {
-            background: #333;
-            color: #f5f7fa;
-        }
-        .dark-mode .container {
-            background: #444;
-            color: #f5f7fa;
-        }
-        .dark-mode .section {
-            background: #555;
-            color: #f5f7fa;
-        }
         .container {
             max-width: 800px;
-            margin: 80px auto 50px; /* Dodano margines na górze dla przycisku Dark Mode */
+            margin: 80px auto 50px;
             background: white;
             padding: 30px;
             border-radius: 15px;
@@ -111,22 +99,7 @@
         .button:hover {
             background-color: #1565c0;
         }
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #1e88e5;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            z-index: 1000; 
-        }
-        .theme-toggle:hover {
-            background-color: #1565c0;
-        }
+        
         @media (max-width: 768px) {
             .container {
                 margin: 80px auto 20px;
@@ -152,6 +125,7 @@
             width: 90px;
             }
         }
+        
         @media (max-width: 480px) {
             .container {
                 margin: 60px auto 10px;
@@ -176,13 +150,13 @@
             .contact-button {
                 width: 90px;
             }
+            
         }
     </style>
 </head>
 <body>
-    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
     <div class="container">
-        <img class="profile-image" src="https://github.com/MattCza/MattCza.github.io/blob/master/img.jpg?raw=true" alt="Mateusz Czajkowski, QA Tester" loading="lazy">
+        <img class="profile-image" src="https://github.com/MattCza/MattCza.github.io/blob/master/img.jpg?raw=true" alt="Mateusz Czajkowski, QA Tester">
         <h1>Mateusz Czajkowski</h1>
         <p><i class="fas fa-hand-peace"></i> Hi there! I'm a professional QA Tester with experience in both manual and automated testing.</p>
         <p>Passionate about delivering high-quality software and improving my skills in automation.</p>
@@ -241,24 +215,5 @@
         
         <p><i class="fas fa-handshake"></i> Let’s connect and create amazing projects together!</p>
     </div>
-
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Ustaw domyślny tryb na jasny
-body.classList.remove('dark-mode');
-themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
-
-// Obsługa przełączania trybów
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
-    } else {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
-    }
-});
-    </script>
 </body>
 </html>
