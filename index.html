@@ -92,8 +92,9 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #1e88e5;
+            border: 4px solid #1e88e5;
             object-position: top center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         .button {
             display: inline-block;
@@ -167,7 +168,7 @@
     <div class="container">
         <img class="profile-image" src="https://github.com/MattCza/MattCza.github.io/blob/master/img.jpg?raw=true" alt="Mateusz Czajkowski's photo">
         <h1>Mateusz Czajkowski</h1>
-        <p>👋 Hi there! I'm a professional QA Tester with experience in both manual and automated testing.</p>
+        <p><i class="fas fa-hand-peace"></i> Hi there! I'm a professional QA Tester with experience in both manual and automated testing.</p>
         <p>Passionate about delivering high-quality software and improving my skills in automation.</p>
         
         <div class="section">
@@ -206,19 +207,21 @@
             <h2><i class="fas fa-language"></i> Languages</h2>
             <ul>
                 <li><i class="fas fa-comment"></i> <strong>Polish</strong> - Native</li>
-                <li><i class="fas fa-comment"></i> <strong>English</strong> - Intermediate</li>
+                <li><i class="fas fa-comment"></i> <strong>English</strong> - Upper-Intermediate</li>
             </ul>
         </div>
         
         <div class="section">
             <h2><i class="fas fa-download"></i> Download CV</h2>
-            <p><a class="button" href="path/to/your/cv.pdf" download><i class="fas fa-file-pdf"></i> Download PDF</a></p>
+            <p><a class="button" href="https://github.com/MattCza/MattCza.github.io/blob/master/CzajkowskiMateuszCV.pdf" download><i class="fas fa-file-pdf"></i> Download CV (English)</a></p>
+            <p><a class="button" href="https://github.com/MattCza/MattCza.github.io/blob/master/CzajkowskiMateuszCV.pdf" download><i class="fas fa-file-pdf"></i> Pobierz CV (Polish)</a></p>
         </div>
         
         <div class="section">
             <h2><i class="fas fa-envelope"></i> Contact Me</h2>
             <p><i class="fas fa-envelope"></i> <a class="button" href="mailto:czajkowskimt@gmail.com">Email</a></p>
             <p><i class="fab fa-linkedin"></i> <a class="button" href="https://www.linkedin.com/in/czajkowski-mateusz1/" target="_blank">LinkedIn</a></p>
+            <p><i class="fab fa-github"></i> <a class="button" href="https://github.com/MattCza" target="_blank">GitHub</a></p>
         </div>
         
         <p><i class="fas fa-handshake"></i> Let’s connect and create amazing projects together!</p>
@@ -229,4 +232,11 @@
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
             if (document.body.classList.contains('dark-mode')) {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>
