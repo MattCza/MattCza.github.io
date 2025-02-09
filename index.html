@@ -7,46 +7,59 @@
     <meta name="keywords" content="QA Tester, Automation, Selenium, REST Assured, Java, Portfolio">
     <meta name="author" content="Mateusz Czajkowski">
     <title>Mateusz Czajkowski - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: Calibri, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #d3d3d3;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             color: #333;
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
-            background: #e0e0e0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
         }
-        h1, h2 {
-            text-align: center;
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
             color: #2c3e50;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
         h3 {
-            margin: 10px 0;
-            color: #2c3e50;
+            font-size: 1.5rem;
+            margin: 15px 0;
         }
         .section {
-            margin: 15px 0;
-            padding: 10px;
-            border-radius: 21px;
-            background: #b0bec5;
-            text-align: left;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            background: #f9f9f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         li, p {
-            text-align: left;
-            margin: 5px 0;
+            margin: 10px 0;
         }
         a {
             color: #1e88e5;
@@ -57,65 +70,63 @@
             text-decoration: underline;
         }
         .profile-image {
-            position: absolute;
-            top: 5px;
-            right: 20px;
+            display: block;
+            margin: 0 auto 20px;
             width: 150px;
             height: 150px;
-            border-radius: 21%;
+            border-radius: 50%;
             object-fit: cover;
+            border: 1px solid #1e88e5;
             object-position: top center;
-            border: 1px solid #333;
-            z-index: 10;
         }
-
-        /* Responsive Design */
+        .button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #1e88e5;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #1565c0;
+        }
         @media (max-width: 768px) {
             .container {
                 margin: 20px auto;
-                padding: 15px;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+            h3 {
+                font-size: 1.25rem;
             }
             .profile-image {
-                position: static;
-                display: block;
-                margin: 0 auto 20px;
                 width: 120px;
                 height: 120px;
             }
-            h1 {
-                font-size: 24px;
-            }
-            h2 {
-                font-size: 20px;
-            }
-            h3 {
-                font-size: 18px;
-            }
-            .section {
-                padding: 15px;
-            }
         }
-
         @media (max-width: 480px) {
             .container {
                 margin: 10px auto;
-                padding: 10px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 1.1rem;
             }
             .profile-image {
                 width: 100px;
                 height: 100px;
-            }
-            h1 {
-                font-size: 22px;
-            }
-            h2 {
-                font-size: 18px;
-            }
-            h3 {
-                font-size: 16px;
-            }
-            .section {
-                padding: 10px;
             }
         }
     </style>
@@ -128,7 +139,7 @@
         <p>Passionate about delivering high-quality software and improving my skills in automation.</p>
         
         <div class="section">
-            <h2>💼 About Me</h2>
+            <h2><i class="fas fa-briefcase"></i> About Me</h2>
             <ul>
                 <li>🌟 Role: Protocol Test Engineer at Samsung Electronics Poland</li>
                 <li>🏠 Based in Poland</li>
@@ -138,7 +149,7 @@
         </div>
         
         <div class="section">
-            <h2>🚀 Highlighted Projects</h2>
+            <h2><i class="fas fa-rocket"></i> Highlighted Projects</h2>
             <h3>1️⃣ <a href="https://github.com/MattCza/demoQA-testing" target="_blank">Selenium Project</a></h3>
             <p>GUI test automation using the Page Object Model (POM) design pattern.</p>
             <p><strong>Technologies:</strong> Java, Selenium WebDriver, Maven, TestNG.</p>
@@ -149,7 +160,7 @@
         </div>
         
         <div class="section">
-            <h2>🛠️ Skills</h2>
+            <h2><i class="fas fa-tools"></i> Skills</h2>
             <ul>
                 <li><strong>Automation Tools:</strong> Selenium, REST Assured, JMeter, Postman</li>
                 <li><strong>Programming:</strong> Java, Python, JS, HTML, CSS</li>
@@ -160,9 +171,9 @@
         </div>
         
         <div class="section">
-            <h2>📫 Contact Me</h2>
-            <p>📧 <a href="mailto:czajkowskimt@gmail.com">Email</a></p>
-            <p>🔗 <a href="https://www.linkedin.com/in/czajkowski-mateusz1/" target="_blank">LinkedIn</a></p>
+            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+            <p>📧 <a class="button" href="mailto:czajkowskimt@gmail.com">Email</a></p>
+            <p>🔗 <a class="button" href="https://www.linkedin.com/in/czajkowski-mateusz1/" target="_blank">LinkedIn</a></p>
         </div>
         
         <p>🔗 Let’s connect and create amazing projects together!</p>
