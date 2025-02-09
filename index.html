@@ -146,13 +146,16 @@
                 height: 120px;
             }
             .button {
-                width: 100%;
+                width: 120px;
+            }
+            .contact-button {
+            width: 80px;
             }
         }
         @media (max-width: 480px) {
             .container {
-                margin: 80px auto 10px;
-                padding: 15px;
+                margin: 60px auto 10px;
+                padding: 10px;
             }
             h1 {
                 font-size: 1.75rem;
@@ -166,6 +169,12 @@
             .profile-image {
                 width: 100px;
                 height: 100px;
+            }
+            .button {
+                width: auto;
+            }
+            .contact-button {
+            width: auto;
             }
         }
     </style>
@@ -235,26 +244,21 @@
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+const body = document.body;
 
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+// Ustaw domyślny tryb na jasny
+body.classList.remove('dark-mode');
+themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
 
-        if (prefersDarkMode) {
-            body.classList.add('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
-        } else {
-            body.classList.remove('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
-        }
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
-            } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
-            }
-        });
+// Obsługa przełączania trybów
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    } else {
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+    }
+});
     </script>
 </body>
 </html>
